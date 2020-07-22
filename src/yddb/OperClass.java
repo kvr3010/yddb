@@ -41,7 +41,7 @@ public class OperClass {
 		}
 	}
 	
-	// 1.5. 사용자 정보 입력받아서 user_join_insert 메소드로 DB에 저장
+	// 1.5. 사용자 정보 입력받아서 user_insert 메소드로 DB에 저장
 	
 	public void userJoin() {
 		System.out.print("사용자 이름 입력 :");
