@@ -41,7 +41,7 @@ public class OperClass {
 		}
 	}
 	
-	// 1.5. 사용자 정보 입력받아서 user_insert 메소드로 DB에 저장
+	// 1.5. 사용자 정보 입력받아서 userdto 저장
 	
 	public void userJoin() {
 		System.out.print("사용자 이름 입력 :");
@@ -64,14 +64,8 @@ public class OperClass {
 		}
 	
 	
-	//3. select메소드로 DB에서 숫자 불러와서 리스트에 저장
-	public void game_savelist() {
-		
-		
-	}
 	
-	
-	// 4. DB에서 불러온 숫자 연산,답비교, 점수 수정
+	// 3. DB에서 불러온 숫자 연산,답비교, 점수 수정 시작하기전에 이름 입력
 		public void game_oper(int select) {
 			int o = 0;
 			ArrayList<NumDTO> numdtolist = DBClass.select();
@@ -103,8 +97,8 @@ public class OperClass {
 							System.out.println("땡");
 					}
 			}
-			userdto.setScore(o);
-			System.out.println(userdto.getName());
+			userdto.setScore(o); //정답 수 저장
+			System.out.println(userdto.getName()); //
 			System.out.println(userdto.getScore());
 			DBClass.user_insert(userdto);
 			}
